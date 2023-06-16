@@ -3,19 +3,13 @@ Your new open-source ShareX image host!
 
 ## Setup
 
-- Download the git repo `git clone https://github.com/RealFascinated/imageify.git`
+- Download the git repo `git clone https://github.com/xbdmHQ/imageify.git share`
 
-- Cd into the new directory `cd imageify`
-- Rename the example env `mv .env-example .env`
+- Cd into the new directory `cd share`
 - Update the env file to your needs `nano .env`
-- Start the server `docker compose up -d`
-- Create an admin account
+- Start the server `docker-compose up -d --build`
+- Create an admin account `docker exec -it imageify-server npm run cli user add admin@example.com`
 - Visit the website <http://SERVERIP:3000>
-
-## How to create an admin account (NOT DONE)
-
-- Run `docker exec -it imageify-server npm run cli user add admin@example.com`
-- You will get a password returned and you can now login to you admin account. (Please note that you should change this password)
 
 ## Todo
 
