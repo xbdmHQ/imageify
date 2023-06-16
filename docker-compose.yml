@@ -1,12 +1,11 @@
-version: "3.4"
+version: "3.7"
 
 services:
   imageify:
-    image: imageify
-    restart: always
-    build:
+  build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: Dockerfile
+    restart: always    
     environment:
       NODE_ENV: production
     env_file:
@@ -22,7 +21,7 @@ services:
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: imageify
-      MONGO_INITDB_ROOT_PASSWORD: reallysecuremongopassword
+      MONGO_INITDB_ROOT_PASSWORD: changethis
     ports:
       - 27017:27017
     user: root
